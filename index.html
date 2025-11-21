@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spread — Welcome to A Spread</title>
+  <meta name="description" content="Spread — simple, fast local delivery. Welcome to A Spread. Building the full Spread experience — deliveries of food, groceries, bakery & more." />
+  <meta name="keywords" content="Spread, local delivery, food delivery, groceries, bakery, India, Spread app" />
+  <link rel="canonical" href="https://aspread.site/" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow, max-snippet:200, max-image-preview:large, max-video-preview:-1" />
+
+  <!-- Theme + Mobile -->
+  <meta name="theme-color" content="#0f1724" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <!-- Open Graph (Facebook, LinkedIn etc.) -->
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Spread — Welcome to A Spread" />
+  <meta property="og:description" content="Spread — simple, fast local delivery. Welcome to A Spread. Building the full Spread experience — deliveries of food, groceries, bakery & more." />
+  <meta property="og:url" content="https://aspread.site/" />
+  <meta property="og:site_name" content="Spread" />
+  <meta property="og:image" content="https://aspread.site/PATH_TO_OG_IMAGE.jpg" />
+  <meta property="og:image:alt" content="Spread — Welcome to A Spread" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@your_twitter_handle" />
+  <meta name="twitter:title" content="Spread — Welcome to A Spread" />
+  <meta name="twitter:description" content="Spread — simple, fast local delivery. Welcome to A Spread." />
+  <meta name="twitter:image" content="https://aspread.site/PATH_TO_OG_IMAGE.jpg" />
+
+  <!-- Icons & Manifest -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Prefetch / Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Structured Data (JSON-LD) for Organization & WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://aspread.site/#organization",
+        "name": "Spread",
+        "url": "https://aspread.site/",
+        "logo": "https://aspread.site/og-logo.png",
+        "sameAs": [
+          "https://www.facebook.com/YOUR_PAGE",
+          "https://twitter.com/YOUR_TWITTER",
+          "https://www.instagram.com/YOUR_IG"
+        ],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+91-6303934410",
+          "contactType": "customer support",
+          "email": "hello@yourdomain.com",
+          "areaServed": "IN"
+        }]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://aspread.site/#website",
+        "url": "https://aspread.site/",
+        "name": "Spread",
+        "publisher": {"@id":"https://aspread.site/#organization"}
+      }
+    ]
+  }
+  </script>
+
+</head>
+<body>
+  <main class="wrap">
+    <div class="card">
+      <div class="logo">
+        <div class="logo-circle">S</div>
+      </div>
+
+      <h1 class="animated-text" aria-live="polite">
+        <span class="wave">Welcome</span>
+        <span class="small">to</span>
+        <span class="brand">A Spread</span>
+      </h1>
+
+      <p class="sub">Simple. Fast. Coming soon — building the full Spread experience.</p>
+
+      <div class="actions">
+        <a class="btn" href="mailto:hello@yourdomain.com?subject=Spread%20Contact">Contact</a>
+        <a class="btn ghost" href="#" id="learn-more">Learn more</a>
+      </div>
+    </div>
+
+    <div class="bg-blob" aria-hidden="true"></div>
+    <div class="bg-blob b2" aria-hidden="true"></div>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
