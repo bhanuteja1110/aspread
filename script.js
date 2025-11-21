@@ -1,30 +1,32 @@
-// script.js - small enhancements: type-reveal + prefers-reduced-motion support
-
+// base enhancements and small UI behaviours
 document.addEventListener('DOMContentLoaded', () => {
+  // respect reduced motion
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const brand = document.querySelector('.brand');
-  const wave = document.querySelector('.wave');
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // optional simple type-reveal on brand text
-  if (!prefersReduced) {
-    brand.style.opacity = 0;
-    brand.style.transform = 'translateY(6px)';
+  // optional brand reveal
+  const brandTitle = document.querySelector('.brand-title');
+  if (brandTitle && !prefersReduced) {
+    brandTitle.style.opacity = 0;
+    brandTitle.style.transform = 'translateY(6px)';
     setTimeout(() => {
-      brand.style.transition = 'opacity 600ms ease, transform 600ms ease';
-      brand.style.opacity = 1;
-      brand.style.transform = 'translateY(0)';
-    }, 400);
-  } else {
-    brand.style.opacity = 1;
+      brandTitle.style.transition = 'opacity 560ms ease, transform 560ms ease';
+      brandTitle.style.opacity = 1;
+      brandTitle.style.transform = 'translateY(0)';
+    }, 240);
   }
 
-  // small waving delay offsets for nicer look
-  wave.style.animationDelay = '120ms';
-
-  // "Learn more" smooth scroll placeholder example (no other sections now)
-  const learn = document.getElementById('learn-more');
-  learn.addEventListener('click', (e) => {
-    e.preventDefault();
-    alert("Thanks — you'll expand this page soon. For now, your site is live!");
+  // small smooth scroll for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const href = a.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
   });
 });
