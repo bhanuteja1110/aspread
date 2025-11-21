@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://aspread.site/sitemap.xml
-Host: https://aspread.site
