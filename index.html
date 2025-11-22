@@ -3,115 +3,127 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Spread - Everything Everywhere </title>
-  <meta name="description" content="Spread — building apps and experiences: Spread (Food & Groceries), Partner & Order Management, Silent, Gift Task Tracker and more." />
-  <meta name="keywords" content="Spread, Spread app, Food delivery, Partner app, Order Management, Silent, Gift Task Tracker" />
+  <title>Spread — Everything Everywhere</title>
+  <meta name="description" content="Spread — building apps: Food & Groceries, Partner & Order Management, Silent, Gift Task Tracker." />
+  <meta name="keywords" content="Spread, Food delivery, Partner app, Order Management, Gift Task Tracker" />
   <link rel="icon" href="/favicon.ico" sizes="any">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Spread — Build & Deliver Experiences" />
-  <meta property="og:description" content="A product family of apps and tools focused on smooth, local experiences." />
-  <meta property="og:image" content="/og-image.png" />
-
-  <!-- Fonts & CSS -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
+  <header class="site-header" role="banner">
+    <div class="container header-row">
       <div class="brand-row">
-        <div class="logo-circle">S</div>
+        <button class="logo-wrap" aria-label="Spread — Home" data-logo>
+          <img src="/mnt/data/ChatGPT Image Nov 21, 2025, 09_52_44 PM.png" alt="Spread logo" class="logo-img" />
+        </button>
         <div class="brand-text">
           <h1 class="brand-title">Spread</h1>
           <div class="brand-sub">Everything Everywhere.</div>
         </div>
       </div>
 
-      <nav class="top-nav" aria-label="Main navigation">
+      <nav class="top-nav" aria-label="Main" id="main-nav">
         <a href="#about">About</a>
         <a href="#how">How it works</a>
         <a href="#works">Our Works</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+        <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0" width="22" height="2" rx="1" fill="currentColor"/><rect y="6" width="22" height="2" rx="1" fill="currentColor"/><rect y="12" width="22" height="2" rx="1" fill="currentColor"/></svg>
+      </button>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" aria-label="Intro">
       <div class="container hero-grid">
         <div class="hero-left">
-          <h2>We build beautiful, reliable apps for local experiences</h2>
-          <p class="lead">Spread is an enterprise of apps — designed with a simple, Apple-like UI and fast UX. We focus on delivery-like experiences, partner tools, order management, messaging, and task tracking.</p>
-
+          <h2 class="hero-title">We build simple, beautiful apps for local experiences</h2>
+          <p class="lead">Spread focuses on fast, minimal interfaces and reliable systems — delivery, partner tools, order management, messaging and task tracking — designed to scale from village pilots to cities.</p>
           <div class="cta-row">
             <a class="btn" href="#works">See our works</a>
             <a class="btn ghost" href="#contact">Get in touch</a>
           </div>
-        </div>
 
-        <div class="hero-right card-ghost">
-          <h3>Quick facts</h3>
-          <ul class="facts">
-            <li><strong>Brand:</strong> Spread (parent enterprise)</li>
-            <li><strong>Focus:</strong> Local utility apps & B2B partner tools</li>
+          <ul class="mini-stats" aria-hidden="true">
             <li><strong>Tech:</strong> React / React Native / Flutter / Firebase</li>
             <li><strong>Design:</strong> Smooth, minimal, performant</li>
           </ul>
+        </div>
+
+        <div class="hero-right card-ghost" aria-hidden="false">
+          <div class="logo-preview" aria-hidden="true" data-logo-preview>
+            <!-- Decorative: show large centered logo with subtle motion -->
+            <img src="/mnt/data/ChatGPT Image Nov 21, 2025, 09_52_44 PM.png" alt="" class="logo-large" />
+          </div>
+
+          <div class="facts-block">
+            <h3>Quick facts</h3>
+            <ul class="facts">
+              <li><strong>Brand:</strong> Spread (parent enterprise)</li>
+              <li><strong>Focus:</strong> Local utility apps & partner tools</li>
+              <li><strong>Goal:</strong> Smooth Apple-like UI and fast UX</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="about" class="info container">
       <h3>What is Spread?</h3>
-      <p>Spread is an enterprise that builds simple, fast, and beautiful apps to connect people and local businesses. It includes consumer-facing apps (ordering, browsing), partner apps for vendors and delivery partners, and internal tools like order management and task trackers.</p>
+      <p>Spread is an enterprise building practical local services: consumer apps for ordering, partner apps for vendors & riders, and admin tools for order management and analytics.</p>
 
-      <h4>Core product lines</h4>
+      <h4>Product lines</h4>
       <ul>
-        <li><strong>Spread (consumer):</strong> App for placing orders (food, grocery, bakery, essentials).</li>
-        <li><strong>Partner App:</strong> For restaurants, vendors and delivery partners to accept/manage orders.</li>
-        <li><strong>Order Management:</strong> Admin dashboard to track orders, riders, payments and analytics.</li>
-        <li><strong>Silent:</strong> Messaging / privacy-first app experience (example project).</li>
-        <li><strong>Gift Task Tracker:</strong> Web app for managing rewards, tasks and gifts.</li>
+        <li><strong>Spread (consumer):</strong> Orders for food, groceries, bakery & essentials.</li>
+        <li><strong>Partner App:</strong> Vendor & rider portal to accept and manage orders.</li>
+        <li><strong>Order Management:</strong> Admin dashboard for operations and analytics.</li>
+        <li><strong>Silent:</strong> Privacy-first messaging experience.</li>
+        <li><strong>Gift Task Tracker:</strong> Web app for rewards & task management.</li>
       </ul>
     </section>
 
-    <section id="how" class="how-it-works container">
-      <h3>How it works — simple flow</h3>
+    <section id="how" class="how-it-works container" aria-labelledby="how-heading">
+      <h3 id="how-heading">How it works — simple flow</h3>
       <ol class="steps">
-        <li><strong>Discover:</strong> User opens Spread, browses categories and partnered vendors.</li>
-        <li><strong>Order:</strong> Add items to cart, choose payment or cash-on-delivery, and place order.</li>
-        <li><strong>Assign & Pickup:</strong> Partner accepts order; a rider picks up the order.</li>
-        <li><strong>Track:</strong> User tracks the order in real-time (geolocation + ETA).</li>
-        <li><strong>Deliver & Rate:</strong> Order delivered; user rates experience & merchant.</li>
+        <li><strong>Discover:</strong> Browse categories and partnered vendors.</li>
+        <li><strong>Order:</strong> Add items, choose payment, and place order.</li>
+        <li><strong>Assign & Pickup:</strong> Partner accepts; rider picks up.</li>
+        <li><strong>Track:</strong> Real-time tracking (geo + ETA).</li>
+        <li><strong>Deliver & Rate:</strong> Delivery completes — rating & feedback.</li>
       </ol>
-
-      <p class="note">Each step is backed by small, focused services: authentication (Firebase), realtime DB (Firestore), storage, and notifications — built to scale while keeping costs low during initial growth.</p>
+      <p class="note">Built on Firebase (auth, Firestore, storage) and designed to keep initial costs low while enabling growth.</p>
     </section>
 
     <section id="works" class="works container">
       <h3>Our Works</h3>
-      <p>Recent projects and live links.</p>
+      <p>Recent projects and live previews.</p>
 
       <div class="works-grid">
         <article class="work-card">
           <div class="work-thumb">BIETS</div>
           <h4>BIETS — College Website</h4>
-          <p>Responsive academic site built and deployed. Live preview:</p>
+          <p>Responsive academic site. Live preview:</p>
           <a class="btn small" href="https://biets.vercel.app" target="_blank" rel="noopener">Open biets.vercel.app</a>
         </article>
 
         <article class="work-card">
           <div class="work-thumb">Silent</div>
-          <h4>Silent — Messaging / Privacy App</h4>
-          <p>A messaging project focused on privacy & clean UI. Live preview:</p>
+          <h4>Silent — Messaging</h4>
+          <p>Privacy-focused messaging project. Live preview:</p>
           <a class="btn small" href="https://asilent.vercel.app" target="_blank" rel="noopener">Open asilent.vercel.app</a>
         </article>
 
         <article class="work-card">
           <div class="work-thumb">Spread (in progress)</div>
-          <h4>Spread — Delivery & Partner tools</h4>
-          <p>Currently in active development: auth, geo-location pages, partner dashboard and order management.</p>
+          <h4>Spread — Delivery & Tools</h4>
+          <p>Active: auth, geo, partner dashboard & order management.</p>
           <a class="btn small ghost" href="#" onclick="alert('Spread app coming soon — follow contact for updates')">More</a>
         </article>
       </div>
@@ -119,7 +131,7 @@
 
     <section id="contact" class="contact container">
       <h3>Contact</h3>
-      <p>For partnerships, development or collaborations: <a href="mailto:support@aspread.site">support@aspread.site</a></p>
+      <p>Partnerships, development, or collabs: <a href="mailto:support@aspread.site">support@aspread.site</a></p>
       <div class="contact-meta">
         <div><strong>Phone:</strong> +91-6303934410</div>
         <div><strong>Office:</strong> Remote</div>
@@ -127,8 +139,8 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-row">
       <div>© <span id="year"></span> Spread — Everything Everywhere.</div>
       <div class="footer-links">
         <a href="#about">About</a>
@@ -137,8 +149,6 @@
     </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="/script.js" defer></script>
 </body>
 </html>
-
-
