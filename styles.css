@@ -456,23 +456,10 @@ main {
 }
 
 .work-thumb {
-  position: relative;
-  z-index: 1;
-  height: 64px;
-  border-radius: 14px;
-  margin-bottom: 10px;
-  background: linear-gradient(120deg, var(--accentA), var(--accentB), var(--accentC));
-  background-size: 200% 200%;
-  display: grid;
-  place-items: center;
-  color: white;
-  font-weight: 700;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 1);
-  animation: thumbShift 10s ease-in-out infinite alternate;
+  background: linear-gradient(120deg, #3b82f6, #6366f1);
+  background-size: 100% 100%;
 }
+
 
 /* scroll reveal state */
 .work-card.revealed {
@@ -666,4 +653,5 @@ main {
     align-items: flex-start;
   }
 }
+
 
