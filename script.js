@@ -1,9 +1,9 @@
-window.onload = function () {
+window.onload = () => {
   setTimeout(() => {
-    document.getElementById("appPopup").style.display = "flex";
+    document.getElementById("popup").style.display = "flex";
   }, 3000);
-};
+}
 
-function closePopup() {
-  document.getElementById("appPopup").style.display = "none";
+function closePopup(){
+  document.getElementById("popup").style.display = "none";
 }
