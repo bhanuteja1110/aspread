@@ -1,187 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Spread</title>
-  <meta name="description" content="Bhanu — building Spread and multiple apps: Food & Groceries, Partner & Order Management, Silent, Gift Task Tracker." />
-  <meta name="keywords" content="Bhanu, Spread, Food delivery, Partner app, Order Management, Gift Task Tracker, Portfolio" />
-  <link rel="icon" href="/favicon.ico" sizes="any">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/styles.css" />
+  <meta charset="UTF-8">
+  <title>Spread – Smart Delivery Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <div class="container header-row">
-      <div class="brand-row">
-        <button class="logo-wrap" aria-label="Spread — Home" data-logo>
-          <img src="/spread-logo.png" alt="Spread Logo" class="logo-img" />
-        </button>
-        <div class="brand-text">
-          <h1 class="brand-title">Spread</h1>
-          <div class="brand-sub">Building simple, beautiful products.</div>
-        </div>
-      </div>
 
-      <nav class="top-nav" aria-label="Main" id="main-nav">
-        <a href="#about">About me</a>
-        <a href="#works">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<!-- POPUP -->
+<div class="popup" id="appPopup">
+  <div class="popup-box">
+    <h2>Get Spread App</h2>
+    <p>Fast deliveries. Simple experience.</p>
+    <a href="https://indusapp.store/ubi727ml" class="btn">Download App</a>
+    <button class="close-btn" onclick="closePopup()">×</button>
+  </div>
+</div>
 
-      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
-        <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect y="0" width="22" height="2" rx="1" fill="currentColor"/>
-          <rect y="6" width="22" height="2" rx="1" fill="currentColor"/>
-          <rect y="12" width="22" height="2" rx="1" fill="currentColor"/>
-        </svg>
-      </button>
-    </div>
-  </header>
+<header>
+  <div class="logo">Spread</div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">Why Spread</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" aria-label="Intro">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <p class="eyebrow">Founder • Developer • Student</p>
-          <h2 class="hero-title">I Build Websites & Apps .</h2>
-          <p class="lead">
-            I’m Bhanuteja, a BTech 1st-year student and founder of <strong>Spread</strong>.
-            I design and build smooth, web applications like food delivery products, partner tools,
-            messaging and college automations.
-          </p>
-          <div class="cta-row">
-            <a class="btn" href="#works">View projects</a>
-            <a class="btn ghost" href="#about">About me</a>
-          </div>
+<section class="hero">
+  <h1>Everything Delivered Fast</h1>
+  <p>Food • Groceries • Local Stores • Smart Apps</p>
+  <a class="btn big" href="https://indusapp.store/ubi727ml">Download Spread App</a>
+</section>
 
-          <ul class="mini-stats" aria-hidden="true">
-            <li><strong>Stack:</strong> React, React Native, Flutter, Firebase, HTML, CSS</li>
-            <li><strong>Focus:</strong> Simple, fast, Beautiful UI</li>
-            <li><strong>Mindset:</strong> Aiming to become a world-class entrepreneur from a young age. </li>
-          </ul>
-        </div>
+<section id="services" class="section">
+  <h2>Our Services</h2>
 
-        <div class="hero-right card-ghost" aria-hidden="false">
-          <div class="logo-preview" aria-hidden="true" data-logo-preview>
-            <img src="/spread-logo.png" alt="Spread Logo" class="logo-large" />
-          </div>
+  <div class="cards">
+    <div class="card">🍔 Food Delivery</div>
+    <div class="card">🥦 Groceries</div>
+    <div class="card">📱 Messaging App</div>
+    <div class="card">🏪 Partner Tools</div>
+  </div>
+</section>
 
-          <div class="facts-block">
-            <h3>Quick snapshot</h3>
-            <ul class="facts">
-              <li><strong>Brand:</strong> Spread (umbrella for all apps)</li>
-              <li><strong>Current focus:</strong> Delivery app, messaging & automation</li>
-              <li><strong>Goal:</strong> From small-town pilots to full-scale products</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+<section id="about" class="section dark">
+  <h2>Why Choose Spread?</h2>
 
-    <!-- ABOUT ME -->
-    <section id="about" class="section container about">
-      <div class="section-header">
-        <h3>About me</h3>
-        <p>Who I am, what I’m building, and how I think.</p>
-      </div>
+  <ul>
+    <li>✔ Fast local delivery</li>
+    <li>✔ Affordable pricing</li>
+    <li>✔ Simple & clean app</li>
+    <li>✔ Built for small towns & cities</li>
+  </ul>
+</section>
 
-      <div class="about-grid">
-        <div class="about-block card-ghost">
-          <h4>Founder & student</h4>
-          <p>
-            I’m <strong>Bhanuteja</strong>, a BTech 1st-year student from India, building
-            <strong>Spread</strong> as a long-term product ecosystem — not just one app.
-            I learn everything from scratch and use real projects to grow my skills.
-          </p>
-          <p>
-            I focus on <strong>clean UI</strong>, <strong>smooth UX</strong>, and
-            practical systems that can actually run in the real world — with proper
-            data, dashboards, and automation.
-          </p>
-        </div>
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Email: spread.now4@gmail.com</p>
+  <p>Phone: +91 6303934410</p>
+</section>
 
-        <div class="about-block card-ghost">
-          <h4>Tech & tools</h4>
-          <ul class="about-list">
-            <li><span>Languages / Frontend:</span> React, React Native, Flutter, HTML, CSS</li>
-            <li><span>Backend & infra:</span> Firebase (Auth, Firestore, Storage)</li>
-            <li><span>Design:</span> Figma, minimal layouts, gradient-heavy dark themes</li>
-            <li><span>Editors:</span> VS Code + Cursor, automation wherever possible</li>
-          </ul>
-        </div>
+<footer>
+  © 2026 Spread. All rights reserved.
+</footer>
 
-    <!-- PROJECTS / WORKS -->
-    <section id="works" class="section container works">
-      <div class="section-header">
-        <h3>Projects</h3>
-        <p>Selected work I’m building under Spread.</p>
-      </div>
-
-      <div class="works-grid">
-        <article class="work-card">
-          <div class="work-thumb">BIETS</div>
-          <h4>BIETS — College Website</h4>
-          <p>Modern, responsive college site with a clean, minimal layout.</p>
-          <a class="btn small" href="https://biets.vercel.app" target="_blank" rel="noopener">Open biets.vercel.app</a>
-        </article>
-
-        <article class="work-card">
-          <div class="work-thumb">Silent</div>
-          <h4>Silent — Messaging</h4>
-          <p>Privacy-focused chat app with encryption, calm UI, and trust-focused UX.</p>
-          <a class="btn small" href="https://asilent.vercel.app" target="_blank" rel="noopener">Open asilent.vercel.app</a>
-        </article>
-
-        <article class="work-card">
-          <div class="work-thumb">Spread</div>
-          <h4>Spread — Delivery & Tools</h4>
-          <p>End-to-end system: consumer app, partner app, and order management tools.</p>
-          <a class="btn small ghost" href="#" onclick="alert('Spread app in active development — follow contact for updates')">More</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section container contact">
-      <div class="section-header">
-        <h3>Contact</h3>
-        <p>For collaborations, ideas, or feedback.</p>
-      </div>
-      <p class="contact-text">
-        Email me for partnerships, app development, or discussions around Spread:
-      </p>
-      <p class="contact-highlight">
-        <a href="mailto:spread.now4@gmail.com">spread.now4@gmail.com</a>
-      </p>
-      <div class="contact-meta">
-        <div><strong>Phone:</strong> +91-6303934410</div>
-        <div><strong>Location:</strong> India • Remote-first</div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-row">
-      <div>© <span id="year"></span> Spread — Everything Everywhere.</div>
-      <div class="footer-links">
-        <a href="#about">About me</a>
-        <a href="#works">Projects</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/script.js" defer></script>
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
